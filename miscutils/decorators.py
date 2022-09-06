@@ -11,7 +11,7 @@ def format_if_date(item, arrow_format: str = "YYYY-MM-DD"):
     Usage:
     >>> format_if_date(datetime(2022, 1, 1, 9, 30))
     2022-01-01
-    >>> format_if_date(datetime(2022, 1, 1, 9, 30), "%Y.%m.%d)
+    >>> format_if_date(datetime(2022, 1, 1, 9, 30), "YYYY.MM.DD")
     2022.01.01
     """
     if isinstance(item, (datetime, date)):
@@ -30,7 +30,7 @@ def format_date_args(arrow_format: str):
     using the `date_format` specification.
 
     Usage:
-    >>> @format_date_args("%Y-%m-%d")
+    >>> @format_date_args("YYYY-MM-DD")
     ... def f(arg):
     ...     print(arg)
     >>> f(datetime(2022, 1, 1, 9, 30))
